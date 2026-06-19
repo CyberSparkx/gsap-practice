@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+<body class="overflow-x-hidden font-sans bg-[#efede7]">
+  <section class="h-screen flex justify-center items-center text-[4rem]">
+    <h2>Scroll Down</h2>
+  </section>
+
+  <section class="reveal-section relative h-screen overflow-hidden bg-[#8570AB]">
+    <!-- TOP CIRCLE: grows downward from the top edge -->
+    <div
+      class="reveal-circle top inner-content absolute inset-0 flex flex-col justify-center items-center bg-[#efede7] z-[1]"
+      style="clip-path: circle(0vmax at 50% 0%)"
+    >
+      <div class="logos absolute top-[50px] w-[90%] flex justify-between text-sm font-medium">
+        <span>RIVER</span>
+        <span>FLOW</span>
+        <span>CURRENT</span>
+        <span>FREEDOM</span>
+        <span>SERENITY</span>
+      </div>
+      <h1 class="text-center leading-[0.9] font-black text-[#8570AB] text-[clamp(60px,10vw,120px)]">
+        A RIVER NEVER<br />
+        ASKS WHERE<br />
+        IT BELONGS.
+      </h1>
+    </div>
+
+    <!-- BOTTOM CIRCLE: grows upward from the bottom edge (same content, hidden from screen readers since the top copy already announces it) -->
+    <div
+      class="reveal-circle bottom inner-content absolute inset-0 flex flex-col justify-center items-center bg-[#efede7] z-[1]"
+      aria-hidden="true"
+      style="clip-path: circle(0vmax at 50% 100%)"
+    >
+      <div class="logos absolute top-[50px] w-[90%] flex justify-between text-sm font-medium">
+        <span>RIVER</span>
+        <span>FLOW</span>
+        <span>CURRENT</span>
+        <span>FREEDOM</span>
+        <span>SERENITY</span>
+      </div>
+      <h1 class="text-center leading-[0.9] font-black text-[#8570AB] text-[clamp(60px,10vw,120px)]">
+        A RIVER NEVER<br />
+        ASKS WHERE<br />
+        IT BELONGS.
+      </h1>
+    </div>
+  </section>
+
+  <section class="h-screen flex justify-center items-center text-[4rem]">
+    <h2>Next Section</h2>
+  </section>
+
+  
+</body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="script.js"></script>
+</html>
