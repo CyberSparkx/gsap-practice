@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { PHOTOS } from '../helpers/photose';
 
 gsap.registerPlugin(useGSAP);
 
@@ -22,16 +23,7 @@ const Hero = () => {
 
     }, []);
 
-  const PHOTOS = [
-    "https://picsum.photos/seed/sgp1/200/200",
-    "https://picsum.photos/seed/sgp2/200/200",
-    "https://picsum.photos/seed/sgp3/200/200",
-    "https://picsum.photos/seed/sgp4/200/200",
-    "https://picsum.photos/seed/sgp5/200/200",
-    "https://picsum.photos/seed/sgp6/200/200",
-    "https://picsum.photos/seed/sgp7/200/200",
-    "https://picsum.photos/seed/sgp8/200/200",
-  ];
+
 
   return (
     <div className="relative w-screen h-screen  overflow-hidden flex flex-col items-center justify-center px-4 sm:px-6">
