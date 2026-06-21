@@ -1,4 +1,27 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
+
+
+
 const Hero = () => {
+
+    useGSAP(() => {
+    gsap.to(".reveal",{
+        duration:2,
+        clipPath:"circle(100vmax at 50% 0%)",
+    })
+
+    gsap.from(".navs",{
+        duration:0.5,
+        opacity:0,
+        y:15,
+        stagger:0.2
+    })
+
+    }, []);
+
   const PHOTOS = [
     "https://picsum.photos/seed/sgp1/200/200",
     "https://picsum.photos/seed/sgp2/200/200",
@@ -12,15 +35,15 @@ const Hero = () => {
 
   return (
     <div className="relative w-screen h-screen  overflow-hidden flex flex-col items-center justify-center px-4 sm:px-6">
-     <div className="[clip-path:circle(0vmax_at_50%_0%)] bg-white">
          {/* top bar — stacks on mobile, row from sm+ */}
-      <div className="w-full flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-between gap-1 sm:gap-4 absolute top-0 left-0 px-4 sm:px-6 py-3 sm:py-0 sm:h-32 font-semibold text-center ">
-        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px]">SGP Web Library</p>
-        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px]">Created by</p>
-        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px]">Naren Roy</p>
-        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px]">2023-26</p>
+      <div className="w-full flex flex-wrap sm:flex-nowrap  items-center justify-center sm:justify-between gap-1 sm:gap-4 absolute top-0 left-0 px-4 sm:px-6 py-3 sm:py-0 sm:h-32 font-semibold text-center ">
+        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px] navs">SGP Web Library</p>
+        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px] navs">Created by</p>
+        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px] navs">Naren Roy</p>
+        <p className="text-xs sm:text-base lg:text-lg flex-1 min-w-[70px] navs">2023-26</p>
       </div>
 
+     <div className="[clip-path:circle(0vmax_at_50%_0%)] bg-white reveal">
       {/* rotating layer — capped with min(), so wide screens don't fling photos to the edges */}
       <div
         className="absolute inset-0 m-auto animate-[spin_28s_linear_infinite] -z-10 [container-type:size]"
@@ -31,9 +54,9 @@ const Hero = () => {
           return (
             <div
               key={i}
-              className="absolute top-1/2 left-1/2 w-[22cqw] h-[22cqw]"
+              className="absolute top-1/2 left-1/2 w-[28cqw] h-[20cqw]"
               style={{
-                transform: `rotate(${angle}deg) translate(70cqw) rotate(-${angle}deg) translate(-50%, -50%)`,
+                transform: `rotate(${angle}deg) translate(68cqw) rotate(-${angle}deg) translate(-50%, -50%)`,
               }}
             >
               <div className="w-full h-full rounded-lg overflow-hidden animate-[spin_28s_linear_infinite_reverse]">
