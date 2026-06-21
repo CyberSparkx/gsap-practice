@@ -38,7 +38,7 @@ const Swipers = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper"
+        className="mySwiper h-60 md:h-1/2 lg:h-screen w-full"
       >
         {PHOTOS.map((photo, index) => (
         <SwiperSlide key={index}>
