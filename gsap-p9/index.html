@@ -12,22 +12,147 @@
 <div class=" wrapper">
     
     <div class="sticky-container" >
-        <div class="w-full h-screen img1
-         z-5 clips">
-            <img src="https://images.unsplash.com/photo-1782318691186-1d909c479de4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-full h-full object-cover">
-        </div>
-        <div class="w-full h-screen img2 z-4 clips">
-            <img src="https://images.unsplash.com/photo-1780323241787-ca13a4ed23a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-full h-full object-cover">
-        </div>
-        <div class="w-full h-screen img3 z-3 clips">
-            <img src="https://images.unsplash.com/photo-1782271784139-4a332ad483cd?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-full h-full object-cover">
-        </div>
-        <div class="w-full h-screen img4 z-2 clips">
-            <img src="https://images.unsplash.com/photo-1781591272000-f7f4f0c386b0?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-full h-full object-cover">
-        </div>
-        <div class="w-full h-screen img5 z-1 clips">
-            <img src="https://images.unsplash.com/photo-1781461565715-887bd369f481?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD" alt="" class="w-full h-full object-cover">
-        </div>
+        <!-- SLIDE 1 -->
+<div class="w-full h-screen img1 z-5 clips relative overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1782318691186-1d909c479de4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0" alt="" class="w-full h-full object-cover absolute inset-0">
+
+  <!-- dark gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+  <!-- content -->
+  <div class="absolute inset-0 flex flex-col justify-end pb-20 px-16">
+    <span class="text-white/60 uppercase tracking-[0.4em] text-xs font-light mb-4">01 / Wilderness</span>
+    <h1 class="text-white text-7xl font-thin leading-none tracking-tight mb-6 max-w-2xl">
+      Where <em class="not-italic font-bold">silence</em><br>speaks loudest
+    </h1>
+    <p class="text-white/70 text-base font-light max-w-md leading-relaxed mb-10">
+      Step beyond the edge of the familiar. These are landscapes that don't ask — they demand presence.
+    </p>
+    <div class="flex items-center gap-6">
+      <button class="bg-white text-black px-8 py-3.5 text-sm uppercase tracking-widest font-medium hover:bg-white/90 transition-colors">
+        Explore Now
+      </button>
+      <button class="text-white/70 text-sm uppercase tracking-widest border-b border-white/30 pb-0.5 hover:text-white hover:border-white transition-colors">
+        View Gallery
+      </button>
+    </div>
+  </div>
+
+  <!-- slide number top-right -->
+  <div class="absolute top-10 right-16 text-white/30 text-8xl font-thin leading-none select-none">01</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="w-full h-screen img2 z-4 clips relative overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1780323241787-ca13a4ed23a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0" alt="" class="w-full h-full object-cover absolute inset-0">
+
+  <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent"></div>
+
+  <div class="absolute inset-0 flex flex-col justify-center pl-16 max-w-3xl">
+    <span class="text-white/60 uppercase tracking-[0.4em] text-xs font-light mb-4">02 / Solitude</span>
+    <h2 class="text-white text-8xl font-black leading-none tracking-tighter mb-6 uppercase">
+      Lost &<br>Found
+    </h2>
+    <p class="text-white/65 text-base font-light max-w-sm leading-relaxed mb-10">
+      Every great journey begins with the courage to disappear — even briefly — from everything you know.
+    </p>
+    <div class="flex items-center gap-4">
+      <button class="border border-white text-white px-8 py-3.5 text-sm uppercase tracking-widest font-medium hover:bg-white hover:text-black transition-all duration-300">
+        Discover More
+      </button>
+      <div class="flex items-center gap-2 text-white/50 text-sm">
+        <div class="w-8 h-px bg-white/40"></div>
+        <span class="uppercase tracking-widest text-xs">Scroll to continue</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute top-10 right-16 text-white/20 text-8xl font-thin leading-none select-none">02</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="w-full h-screen img3 z-3 clips relative overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1782271784139-4a332ad483cd?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0" alt="" class="w-full h-full object-cover absolute inset-0">
+
+  <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10"></div>
+
+  <!-- centered content -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+    <span class="text-white/60 uppercase tracking-[0.4em] text-xs font-light mb-6">03 / Ascent</span>
+    <h2 class="text-white text-7xl font-extralight leading-tight tracking-wide mb-4 max-w-xl">
+      The summit<br>was never the goal
+    </h2>
+    <div class="w-12 h-px bg-white/40 my-6"></div>
+    <p class="text-white/65 text-sm font-light max-w-xs leading-relaxed mb-10">
+      It's the hours of not-knowing. The cold. The doubt. That's where you find what you're made of.
+    </p>
+    <div class="flex gap-4">
+      <button class="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-7 py-3 text-sm uppercase tracking-widest hover:bg-white/20 transition-all">
+        Read Story
+      </button>
+      <button class="bg-white text-black px-7 py-3 text-sm uppercase tracking-widest font-semibold hover:bg-white/90 transition-colors">
+        Book Journey
+      </button>
+    </div>
+  </div>
+
+  <div class="absolute top-10 right-16 text-white/20 text-8xl font-thin leading-none select-none">03</div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="w-full h-screen img4 z-2 clips relative overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1781591272000-f7f4f0c386b0?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0" alt="" class="w-full h-full object-cover absolute inset-0">
+
+  <div class="absolute inset-0 bg-gradient-to-bl from-black/60 via-transparent to-black/80"></div>
+
+  <!-- bottom-right aligned -->
+  <div class="absolute bottom-20 right-16 text-right max-w-lg">
+    <span class="text-white/60 uppercase tracking-[0.4em] text-xs font-light mb-4 block">04 / Horizon</span>
+    <h2 class="text-white text-7xl font-bold leading-none tracking-tighter mb-6">
+      Endless<br><span class="font-thin italic">edge</span>
+    </h2>
+    <p class="text-white/65 text-sm font-light leading-relaxed mb-8">
+      Some landscapes make the planet feel infinite again. Stand here long enough and time stops.
+    </p>
+    <div class="flex gap-4 justify-end">
+      <button class="text-white border-b border-white/40 pb-0.5 text-sm uppercase tracking-widest hover:border-white transition-colors">
+        See Location
+      </button>
+      <button class="bg-white text-black px-7 py-3 text-sm uppercase tracking-widest font-medium hover:bg-white/90 transition-colors">
+        Plan Trip
+      </button>
+    </div>
+  </div>
+
+  <div class="absolute top-10 left-16 text-white/20 text-8xl font-thin leading-none select-none">04</div>
+</div>
+
+<!-- SLIDE 5 — final, base layer -->
+<div class="w-full h-screen img5 z-1 clips relative overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1781461565715-887bd369f481?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0" alt="" class="w-full h-full object-cover absolute inset-0">
+
+  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+
+  <div class="absolute inset-0 flex flex-col justify-end pb-20 px-16">
+    <span class="text-white/60 uppercase tracking-[0.4em] text-xs font-light mb-4">05 / Arrival</span>
+    <h2 class="text-white text-7xl font-thin leading-none tracking-tight mb-3 max-w-xl">
+      You made it.<br><strong class="font-black">Now what?</strong>
+    </h2>
+    <p class="text-white/65 text-base font-light max-w-sm leading-relaxed mb-10">
+      This is where the real journey begins. No map. No signal. Just you and what's next.
+    </p>
+    <div class="flex items-center gap-6">
+      <button class="bg-white text-black px-10 py-4 text-sm uppercase tracking-widest font-semibold hover:bg-white/90 transition-colors">
+        Start Your Journey
+      </button>
+      <div class="text-white/40 text-xs uppercase tracking-widest">
+        © 2025 Wilderness Co.
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute top-10 right-16 text-white/20 text-8xl font-thin leading-none select-none">05</div>
+</div>
 
     </div>
 </div>
