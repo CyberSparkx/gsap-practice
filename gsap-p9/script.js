@@ -1,20 +1,18 @@
+// registering the plugin scrollTrigger with gsap
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize a new Lenis instance for smooth scrolling
+// initializing lenis smooth scrolling
 const lenis = new Lenis();
-
-// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
 lenis.on('scroll', ScrollTrigger.update);
-
-// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-// This ensures Lenis's smooth scroll animation updates on each GSAP tick
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+  lenis.raf(time * 1000); 
 });
-
-// Disable lag smoothing in GSAP to prevent any delay in scroll animations
 gsap.ticker.lagSmoothing(0);
 
+
+
+
+// from here we will create the scroll-triggered animations for each of the slides. The idea is to animate the clip-path of each slide so that it "wipes" away as the user scrolls down, revealing the next slide underneath. The last slide (img5) is the base layer and will not be clipped.
 const slides = [".img1", ".img2", ".img3", ".img4"]; // img5 is the base, never clips
 
 slides.forEach((selector, i) => {
