@@ -1,12 +1,19 @@
+gsap.registerPlugin(ScrollTrigger);
 
+const slides = [".img1", ".img2", ".img3", ".img4"]; // img5 is the base, never clips
 
-document.getElementById("trigger").addEventListener("click", () => {
-  gsap.to("#slide1", {
-    clipPath: "inset(0 0 100% 0)",   // bottom inset grows → wipes upward
-    duration: 1.4,
-    ease: "power3.inOut",
-    onComplete: () => {
-      // slide-1 is now gone — do whatever comes next
+slides.forEach((selector, i) => {
+  gsap.to(selector, {
+    clipPath: "inset(0 0 100% 0)", // wipes upward
+
+    ease: "none", // linear — scroll scrubs it 1:1
+
+    scrollTrigger: {
+      trigger: ".wrapper",
+      start: `${i * 20}% top`,       // each slide owns 20% of scroll (100% / 5 slides)
+      end: `${(i + 1) * 20}% top`,
+      scrub: true,                    // ties animation to scroll position
+      // markers: true,               // ← uncomment to debug
     }
   });
 });
