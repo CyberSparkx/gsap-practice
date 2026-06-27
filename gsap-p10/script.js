@@ -22,7 +22,7 @@ split.chars.forEach((char) => {
       trigger: char,
       containerAnimation: scrollTween,
       start: "left 100%",
-      end: "left 30%",
+      end: "left 90%",
       scrub: 1
     }
   });
