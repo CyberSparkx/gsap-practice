@@ -37,7 +37,9 @@ const Hero = () => {
           { y: 20, autoAlpha: 0, duration: 0.5, stagger: 0.15 },
           "-=0.2"
         );
+
     },
+
     { scope: containerRef }
   );
  
@@ -49,7 +51,7 @@ const Hero = () => {
     >
       {/* ── Background image ── */}
       <img
-        className="hero-img absolute inset-0 w-full h-full object-cover object-top"
+        className="hero-img absolute   object-top inset-0 w-[100vw] h-[150vh] "
         src="https://i.pinimg.com/736x/78/af/c9/78afc99af9ffeccab3cd7d2b54c6ccdf.jpg"
         alt="Hero background"
       />
