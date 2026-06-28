@@ -1,9 +1,11 @@
+import Hero from "./pages/Hero"
 
 const App = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold">Gsap Project 1</h1>
-    </div>
+    <>
+    <Hero/>
+
+    </>
   )
 }
 
