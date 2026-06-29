@@ -1,0 +1,111 @@
+.clip {
+  clip-path: circle(0% at 50% 50%);
+}
+
+
+
+ body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+    }
+ 
+    /* Hero background image slot */
+    .hero-bg {
+      background-image: url('https://i.pinimg.com/736x/2b/1b/ce/2b1bced8f419192a533b84ee8fe878f9.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+ 
+    /* Hero character image slot */
+    .hero-character {
+      background-image: url('https://i.pinimg.com/originals/74/a2/9c/74a29ccf464dc7cb2414200033036226.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+ 
+    .title-main {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(3.5rem, 5vw, 8rem);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+ 
+    .title-sub {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2.5rem, 4vw, 5.5rem);
+      font-weight: 700;
+      color: #e8192c;
+      line-height: 1;
+      margin-top: -0.2em;
+    }
+ 
+    .nav-link {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      color: #cccccc;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: #ffffff; }
+    .nav-link.active { color: #e8192c; }
+ 
+    .btn-primary {
+      background-color: #e8192c;
+      color: #ffffff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.2rem;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+      transition: background-color 0.2s;
+    }
+    .btn-primary:hover { background-color: #c8111e; }
+ 
+    .btn-secondary {
+      border: 2px solid rgba(255,255,255,0.4);
+      color: #ffffff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.2rem;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.8);
+      background-color: rgba(255,255,255,0.05);
+    }
+ 
+    /* Overlay gradient for the hero area */
+    .hero-overlay {
+      background: linear-gradient(
+        to right,
+        rgba(10,10,10,0.95) 0%,
+        rgba(10,10,10,0.7) 50%,
+        rgba(10,10,10,0.1) 100%
+      );
+    }
+ 
+    .social-icon {
+      color: #999;
+      transition: color 0.2s;
+    }
+    .social-icon:hover { color: #fff; }
+ 
+    /* Red accent line below logo */
+    .logo-accent::after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 24px;
+      background: #e8192c;
+      margin: 4px auto 0;
+    }
