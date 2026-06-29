@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Flip</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+
+<body class=" text-white overflow-x-hidden wrap">
+
+    <div id="app">
+        <div class="wrapper h-screen w-full bg- [#010101] flex items-center justify-center">
+            <div class="svg-wrapper h-[45%] w-[35%] 
+">
+
+                <svg width="100%" height="100%">
+                    <defs>
+                        <filter id="myFilter">
+                            <feTurbulence type="fractalNoice" baseFrequency="0.3" numOctaves="2" result="NOICE" />
+
+                            <feDisplacementMap in="SourceGraphic" in2="NOICE" scale="250" xChannelSelector="R"
+                                yChannelSelector="G" />
+
+                        </filter>
+
+
+                        <mask id="mask">
+                            <circle cx="50%" cy="50%" r="0" fill="white" class="displacement" />
+                        </mask>
+                    </defs>
+                    <image width="100%" height="100%" mask="url(#mask)"
+                        xlink:href="https://i.pinimg.com/736x/f1/73/73/f173730069765f3f4ee765acc18d1062.jpg"></image>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="script.js"></script>
+
+</html>
