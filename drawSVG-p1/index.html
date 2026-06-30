@@ -3,11 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Draw SVG</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Poppins', 'sans-serif'],
+          script: ['Dancing Script', 'cursive'],
+        },
+        colors: {
+          olive: '#7f9b3d',
+          mustard: '#e0a32e',
+          brown: '#3a2a1e',
+        }
+      }
+    }
+  }
+</script>
 </head>
-<body>
+<body class="font-sans text-brown bg-white">
+ 
+  <!-- HEADER -->
+  <header class="flex items-center justify-between px-6 md:px-12 py-5">
+    <div class="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center">
+      <span class="text-xs text-gray-400">
+        <img src="https://i.pinimg.com/1200x/e8/6c/89/e86c89256306bf2bfc2d96625ff6a37c.jpg" alt="">
+      </span>
+    </div>
+    <div class="flex items-center gap-6">
+      <div class="hidden sm:flex items-center gap-2 text-brown font-semibold">
+        <span class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white text-xs">📞</span>
+        <span>+226 06543476</span>
+      </div>
+      <button class="flex items-center gap-2 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full">
+        <span class="w-5 h-5 rounded-full bg-white/30 flex items-center justify-center text-[10px]">👤</span>
+        LOG IN
+      </button>
+    </div>
+  </header>
+ 
+  <!-- HERO -->
+  <section class="relative bg-gray-100 pt-6 pb-24 px-6 md:px-16 overflow-hidden">
+    <div class="max-w-7xl h-96 mx-auto grid md:grid-cols-2 gap-10 items-center">
+ 
+      <!-- left image placeholder -->
+      <div class="relative flex justify-center">
+        <div class="w-full max-w-md h-80 rounded-3xl bg-gray-200 border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400">
+         <img src="https://i.pinimg.com/736x/74/8b/06/748b06da501ffede61587bb255ad88cf.jpg" alt="">
+        </div>
     
+      </div>
+ 
+      <!-- right text -->
+      <div class="text-center md:text-left">
+        <p class="font-script text-4xl md:text-5xl text-blue-950 -mb-3">Mouton</p>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-amber-800 tracking-wide">Biryani</h1>
+ 
+        <div class="flex items-center justify-center md:justify-start gap-2 mt-4">
+          <span class="text-mustard text-lg">★★★★★</span>
+          <span class="font-bold text-lg">4.5</span>
+          <span class="text-gray-400 text-sm underline">571 Reviews</span>
+        </div>
+ 
+        <div class="mt-5 bg-olive text-white rounded-2xl px-6 py-5 max-w-md mx-auto md:mx-0">
+          <p class="text-sm leading-relaxed text-center">
+            Découvrez Biryana, votre destination gourmande au cœur de Ouagadougou ! Savourez nos délicieux grillers artisanaux, préparés avec passion et des ingrédients frais. Un cadre chaleureux, un service attentionné et des saveurs irrésistibles vous attendent. Venez vivre une expérience culinaire unique !
+          </p>
+        </div>
+ 
+        <div class="flex items-center justify-center md:justify-start gap-4 mt-6">
+          <button class="bg-mustard hover:bg-amber-500 text-white font-semibold px-6 py-3 rounded-full transition">ORDER NOW</button>
+          <button class="border-2 border-mustard text-mustard hover:bg-mustard hover:text-white font-semibold px-6 py-3 rounded-full transition">EXPLORE MORE</button>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- wave bottom -->
+    <svg class="absolute bottom-0 left-0 w-full text-white" viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0,40 C360,90 1080,0 1440,40 L1440,80 L0,80 Z"></path>
+    </svg>
+  </section>
+ 
+  <!-- MENU CARDS -->
+  <section class="relative bg-white px-6 md:px-16 py-16">
+    <div class="max-w-7xl mx-auto relative">
+ 
+      <!-- nav arrows -->
+      <button class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white shadow-lg items-center justify-center text-gray-500 z-10">‹</button>
+      <button class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white shadow-lg items-center justify-center text-gray-500 z-10">›</button>
+ 
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+ 
+        <!-- card 1 -->
+        <div class="bg-olive rounded-3xl p-6 relative text-white">
+          <div class="w-full h-36 rounded-2xl bg-white/20 border-2 border-dashed border-white/40 flex items-center justify-center text-white/70 text-sm mb-4 overflow-hidden">
+           <img src="https://i.pinimg.com/736x/2a/e5/ce/2ae5ce2b1194546a092d18e65933b315.jpg" alt="">
+          </div>
+          <div class="absolute top-28 right-6 w-16 h-16 rounded-full bg-white text-brown flex flex-col items-center justify-center shadow-lg leading-none">
+            <span class="text-[10px] font-semibold mt-1">PRICE</span>
+            <span class="text-sm font-bold">₹180</span>
+            <span class="text-[10px] line-through text-gray-400">₹200</span>
+          </div>
+          <p class="font-script text-xl -mb-1">Jeera</p>
+          <h3 class="text-2xl font-bold">Chawal</h3>
+          <div class="flex items-center gap-2 mt-2 text-sm">
+            <span class="text-mustard">★★★★★</span>
+            <span class="font-semibold">4.5</span>
+          </div>
+          <p class="text-sm text-white/90 mt-2 leading-relaxed">
+            Aromatic, soft, and tender chunks of lamb layered with rice infused with the flavors of spices...
+          </p>
+          <button class="mt-4 bg-brown text-white text-sm font-semibold px-5 py-2 rounded-full">ORDER NOW</button>
+        </div>
+ 
+        <!-- card 2 -->
+        <div class="bg-mustard rounded-3xl p-6 relative text-white">
+          <div class="w-full h-36 rounded-2xl bg-white/20 border-2 border-dashed border-white/40 flex items-center justify-center text-white/70 text-sm mb-4 overflow-hidden">
+            <img src="https://i.pinimg.com/736x/53/aa/92/53aa92b4dc77a2d9c82e6ccd2d8dda35.jpg" alt="">
+          </div>
+          <div class="absolute top-28 right-6 w-16 h-16 rounded-full bg-white text-brown flex flex-col items-center justify-center shadow-lg leading-none">
+            <span class="text-[10px] font-semibold mt-1">PRICE</span>
+            <span class="text-sm font-bold">₹220</span>
+            <span class="text-[10px] line-through text-gray-400">₹260</span>
+          </div>
+          <p class="font-script text-xl -mb-1">Kadai</p>
+          <h3 class="text-2xl font-bold">Chicken</h3>
+          <div class="flex items-center gap-2 mt-2 text-sm">
+            <span class="text-white">★★★★★</span>
+            <span class="font-semibold">4.5</span>
+          </div>
+          <p class="text-sm text-white/90 mt-2 leading-relaxed">
+            Aromatic, soft, and tender chunks of lamb layered with rice infused with the flavors of spices...
+          </p>
+          <button class="mt-4 bg-brown text-white text-sm font-semibold px-5 py-2 rounded-full">ORDER NOW</button>
+        </div>
+ 
+        <!-- card 3 -->
+        <div class="bg-olive rounded-3xl p-6 relative text-white sm:col-span-2 lg:col-span-1">
+          <div class="w-full h-36 rounded-2xl bg-white/20 border-2 border-dashed border-white/40 flex items-center justify-center text-white/70 text-sm overflow-hidden mb-4">
+            <img src="https://i.pinimg.com/1200x/3e/1b/4b/3e1b4b78272262ab623a89fcf2bbd300.jpg" alt="">
+          </div>
+          <div class="absolute top-28 right-6 w-16 h-16 rounded-full bg-white text-brown flex flex-col items-center justify-center shadow-lg leading-none">
+            <span class="text-[10px] font-semibold mt-1">PRICE</span>
+            <span class="text-sm font-bold">₹200</span>
+            <span class="text-[10px] line-through text-gray-400">₹220</span>
+          </div>
+          <p class="font-script text-xl -mb-1">Palak</p>
+          <h3 class="text-2xl font-bold">Paneer</h3>
+          <div class="flex items-center gap-2 mt-2 text-sm">
+            <span class="text-mustard">★★★★★</span>
+            <span class="font-semibold">4.5</span>
+          </div>
+          <p class="text-sm text-white/90 mt-2 leading-relaxed">
+            Aromatic, soft, and tender chunks of lamb layered with rice infused with the flavors of spices...
+          </p>
+          <button class="mt-4 bg-brown text-white text-sm font-semibold px-5 py-2 rounded-full">ORDER NOW</button>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- WAVE before footer -->
+  <div class="relative bg-gray-100">
+    <svg class="absolute -top-1 left-0 w-full text-white" viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0,30 C360,-20 1080,80 1440,20 L1440,0 L0,0 Z"></path>
+    </svg>
+ 
+    <!-- FOOTER -->
+    <footer class="pt-16 pb-8 px-6 text-center">
+      <div class="flex justify-center gap-4 mb-6">
+        <a href="#" class="w-9 h-9 rounded-full bg-brown text-white flex items-center justify-center text-sm">f</a>
+        <a href="#" class="w-9 h-9 rounded-full bg-brown text-white flex items-center justify-center text-sm">p</a>
+        <a href="#" class="w-9 h-9 rounded-full bg-brown text-white flex items-center justify-center text-sm">t</a>
+        <a href="#" class="w-9 h-9 rounded-full bg-brown text-white flex items-center justify-center text-sm">ig</a>
+      </div>
+      <nav class="flex flex-wrap justify-center gap-2 text-sm text-gray-600 mb-4">
+        <a href="#" class="hover:text-brown">Home</a> /
+        <a href="#" class="hover:text-brown">About Us</a> /
+        <a href="#" class="hover:text-brown">Menu</a> /
+        <a href="#" class="hover:text-brown">Blog</a> /
+        <a href="#" class="hover:text-brown">Contact</a> /
+        <a href="#" class="hover:text-brown">Return Policy</a>
+      </nav>
+      <p class="text-xs text-gray-400">Copyright © 2010-2024 Kanigiri Restaurant. All rights reserved.</p>
+    </footer>
+  </div>
+ 
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
