@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Draw SVG p2</title>
 </head>
-<body>
 
-   <svg width="168" height="301" viewBox="0 0 168 301" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.5 250.055V50.0552L152.5 250.055V50.0552" stroke="#C5793A" style="mix-blend-mode:exclusion" stroke-width="31" stroke-linecap="round"/>
-</svg>
-    
+<body class="bg-[#1A1A1A] flex justify-center items-center h-screen">
+
+    <svg width="168" height="301" viewBox="0 0 168 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="path" d="M15.5 250.055V50.0552L152.5 250.055V50.0552" stroke="white"
+            style="mix-blend-mode:exclusion" stroke-width="31" stroke-linecap="round" />
+    </svg>
+
+    <div class="absolute top-0 left-0 w-full h-full flex justify-between px-12 items-center">
+        <svg width="167" height="300" viewBox="0 0 167 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path" d="M15.5041 15.5041C190.788 85.5236 201.463 142.287 15.5041 284.504" stroke="orange"
+                stroke-width="31" stroke-linecap="round" />
+        </svg>
+        <svg width="167" height="300" viewBox="0 0 167 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="path" d="M15.5041 15.5041C190.788 85.5236 201.463 142.287 15.5041 284.504" stroke="orange"
+                stroke-width="31" stroke-linecap="round" />
+        </svg>
+
+    </div>
+
+
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/DrawSVGPlugin.min.js" integrity="sha512-yOZoZc/D5ZPHwjBduLkgeGHhFlQ7CsslA5D1egpQgeV1QcV4OdCcwmRLkH7p/hEHHF1cJp3H2OpGpd7oELFGxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/DrawSVGPlugin.min.js"
+    integrity="sha512-yOZoZc/D5ZPHwjBduLkgeGHhFlQ7CsslA5D1egpQgeV1QcV4OdCcwmRLkH7p/hEHHF1cJp3H2OpGpd7oELFGxg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="script.js"></script>
+
 </html>
